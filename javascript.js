@@ -22,6 +22,27 @@ class Smoothie{
         smoothieOptionImg.src = this.smoothieOption === 'smoothie' ? 'images/bowl.jpg' : 'images/cup.jpg';
 
       
-        
+        orderSummary.appendChild(smoothieTypeHead);
+        orderSummary.appendChild(this.smoothieOption);
+        orderSummary.appendChild(milkTypeText);
+        orderSummary.appendChild(additionalRequestText);
     }
 }
+
+//function to grab values selected
+function submission(event){
+    event.preventDefault();
+
+    const smoothieType = document.getElementById ('smoothieType').value;
+    const milkType = document.getElementById ('milkType').value;
+    const additionalRequest = document.getElementById ('additionalRequest').value;
+    const smoothieOption = document.querySelector('input[name="smoothieOption"]:checked').value;
+    //smoothie object
+    const smoothie = new Smoothie(smoothieType, milkType, smoothieOption, additionalRequest);
+    
+    smoothie.displayOrder();
+}
+
+//event listen
+document.getElementById('orderForm').addEventListener('submit', submission);
+
