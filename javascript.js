@@ -14,17 +14,24 @@ class Smoothie{
         orderSummary.textContent = '';
         //elements for smoothie!
         let smoothieTypeHead = document.createElement('h3');
-        let milkTypeText = document.createTextNode(`Type of Milk: ${this.milkType}`);
-        let smoothieOptionImg = document.createElement('img');
-        let additionalRequestText = document.createTextNode(`Additional Requests: ${this.additionalRequest}`);
-        //throwing in the ternary
         smoothieTypeHead.textContent = `Flavour: ${this.smoothieType}`;
+
+        let milkTypeText = document.createElement('p');
+        milkTypeText.textContent = `Type of Milk: ${this.milkType}`;
+        //throwing in the ternary
+        let smoothieOptionImg = document.createElement('img');
         smoothieOptionImg.src = this.smoothieOption === 'smoothie' ? 'images/bowl.jpg' : 'images/cup.jpg';
 
-      
+        let additionalRequestText = document.createElement('p');
+        additionalRequestText.textContent = `Additional Requests: ${this.additionalRequest}`;
+        
+    
         orderSummary.appendChild(smoothieTypeHead);
-        orderSummary.appendChild(this.smoothieOption);
+      
+        orderSummary.appendChild(smoothieOptionImg);
+       
         orderSummary.appendChild(milkTypeText);
+        
         orderSummary.appendChild(additionalRequestText);
     }
 }
