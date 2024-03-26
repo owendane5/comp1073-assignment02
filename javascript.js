@@ -20,18 +20,15 @@ class Smoothie{
         milkTypeText.textContent = `Type of Milk: ${this.milkType}`;
         //throwing in the ternary
         let smoothieOptionImg = document.createElement('img');
-        smoothieOptionImg.src = this.smoothieOption === 'smoothie' ? 'images/bowl.jpg' : 'images/cup.jpg';
+        smoothieOptionImg.src = this.smoothieOption === 'smoothie' ? 'images/bowl.png' : 'images/cup.png';
 
         let additionalRequestText = document.createElement('p');
         additionalRequestText.textContent = `Additional Requests: ${this.additionalRequest}`;
         
     
         orderSummary.appendChild(smoothieTypeHead);
-      
         orderSummary.appendChild(smoothieOptionImg);
-       
         orderSummary.appendChild(milkTypeText);
-        
         orderSummary.appendChild(additionalRequestText);
     }
 }
@@ -50,6 +47,14 @@ function submission(event){
     smoothie.displayOrder();
 }
 
+//restart order button
+function restartOrder(event) {
+    event.preventDefault();
+    window.location.reload(); // Reload the page
+}
+
 //event listen
 document.getElementById('orderForm').addEventListener('submit', submission);
+document.getElementById('restartButton').addEventListener('click', restartOrder);
+
 

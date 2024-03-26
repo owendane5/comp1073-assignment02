@@ -23,8 +23,8 @@ nav {
     margin-top: 3em;
 }
 
-#orderForm,
-#orderSum {
+#orderForm
+ {
     width: 300px;
     padding: 20px;
     background-color: #f9dfc5;
@@ -68,4 +68,35 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+#orderSum {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    
+}
+
+ #orderSum h2 {
+    font-size: 20px;
+}
+
+#orderSum img {
+    width: 100px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+#orderSum p {
+    margin: 30px 0;
+}
+button{
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
