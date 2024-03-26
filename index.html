@@ -3,11 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Smoothie Madness</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js" defer></script> 
+
 </head>
 <body>
-    <h1>
-        
-    </h1>
+    <nav>
+        <h1>
+            Smoothie Madness
+        </h1>
+    </nav>
+    <div id="inputOutput">
+    <fieldset id="orderForm">
+        <h2>Please Make your Smoothie of Choice</h2>
+        <form action="/submitOrder" method="post">
+            <label for="smoothieType">Type of Smoothie:</label>
+            <select id="smoothieType" name="smoothieType">
+              <option value="chocolateBanana">Chocolate Banana</option>
+              <option value="strawberryKiwi">Strawberry Kiwi</option>
+              <option value="strawberryBanana">Strawberry Banana</option>
+              <option value="orangeBlueberry">Orange Blueberry</option>
+            </select>
+            <br><br>
+            
+            <label for="milkType">Type of Milk:</label>
+            <select id="milkType" name="milkType">
+              <option value="oat">Oat Milk</option>
+              <option value="milk">Regular Milk</option>
+              <option value="chocolateMilk">Chocolate Milk</option>
+            </select>
+            <br><br>
+            
+            <label for="smoothieOption">Smoothie or Smoothie Bowl:</label><br>
+            <input type="radio" id="smoothie" name="smoothieOption" value="smoothie">
+            <label for="smoothie">Smoothie</label><br>
+            <input type="radio" id="smoothieBowl" name="smoothieOption" value="smoothieBowl">
+            <label for="smoothieBowl">Smoothie Bowl</label><br><br>
+            
+            <label for="additionalRequest">Additional Request:</label><br>
+            <textarea id="additionalRequest" name="additionalRequest" rows="4" cols="50"></textarea>
+            <br><br>
+            
+            <input type="submit" value="Submit Order">
+    </fieldset>
+    <div id="orderSum">
+        <h2>Take a look at your order!</h2>
+    </div>
+    </div>
 </body>
 </html>
